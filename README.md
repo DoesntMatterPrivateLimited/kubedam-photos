@@ -6,3 +6,13 @@ kubeadm join 192.168.10.4:6443 --token 3ne5op.qd57ts8uc2356ju5 --discovery-token
 ![image](https://github.com/user-attachments/assets/2d628e54-4a3c-43b5-aabf-f81854ebc35a)
 ![image](https://github.com/user-attachments/assets/d4d09c31-b5ff-4a1c-8dd4-c4c325550348)
 
+1️⃣ Verify Cluster & Workloads
+Before starting the upgrade, check the current state of your cluster:
+
+bash
+Copy
+Edit
+kubectl get nodes
+kubectl get pods -A -o wide
+Ensure your worker node is Ready.
+Identify which workloads are running on it.
