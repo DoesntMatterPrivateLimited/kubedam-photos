@@ -232,7 +232,23 @@ sudo systemctl restart kubelet
 
 
 
+🚀 Step 3: Verify & Restore Workloads
+1️⃣ Check Cluster Health
+bash
+Copy
+Edit
+kubectl get nodes
+kubectl get pods -A
+kubectl cluster-info
+Ensure everything is running fine.
 
+2️⃣ Restore Workloads (If Needed)
+If workloads were evicted, restart them manually:
+
+bash
+Copy
+Edit
+kubectl rollout restart deployment <your-deployment>
 
 
 
