@@ -93,7 +93,19 @@ Edit
 sudo kubeadm join <master-ip>:6443 --token <token> --discovery-token-ca-cert-hash sha256:<hash>
 
 
+6️⃣ Uncordon the Worker Node & Verify
+Once the worker node is Ready, allow scheduling again:
 
+bash
+Copy
+Edit
+kubectl uncordon <worker-node-name>
+Verify that all pods are running correctly:
+
+bash
+Copy
+Edit
+kubectl get pods -A -o wide
 
 
 
