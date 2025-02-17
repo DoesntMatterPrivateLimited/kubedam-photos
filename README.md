@@ -222,6 +222,13 @@ sudo kubeadm upgrade apply v<NEW_VERSION>
 
 
 
+2️⃣ Upgrade Kubelet & Kubectl
+bash
+Copy
+Edit
+sudo apt install -y kubelet=<NEW_VERSION> kubectl=<NEW_VERSION>
+sudo systemctl daemon-reload
+sudo systemctl restart kubelet
 
 
 
