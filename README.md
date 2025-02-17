@@ -29,7 +29,16 @@ bash
 Copy
 Edit
 kubectl taint nodes <master-node-name> node-role.kubernetes.io/control-plane:NoSchedule-
-Now, if you have any Deployment-based workloads, you can scale them up to replicate pods on the master:
+Now, if you have any Deployment-based workloads, you can scale them up to replicate pods on the master:3️⃣ Cordon & Drain the Worker Node
+Cordoning prevents new pods from being scheduled while draining safely removes existing ones.
+
+bash
+Copy
+Edit
+kubectl cordon <worker-node-name>
+kubectl drain <worker-node-name> --ignore-daemonsets --delete-emptydir-data
+
+
 
 bash
 Copy
