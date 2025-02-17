@@ -16,3 +16,24 @@ kubectl get nodes
 kubectl get pods -A -o wide
 Ensure your worker node is Ready.
 Identify which workloads are running on it.
+2️⃣ Temporarily Move Critical Workloads to Master (if possible)
+If your master node allows workloads (i.e., does not have the NoSchedule taint), you can schedule some workloads on it.
+
+Check if the master allows scheduling:
+bash
+Copy
+Edit
+kubectl describe node <master-node-name> | grep Taints
+If the master is tainted (NoSchedule), remove the taint temporarily:
+bash
+Copy
+Edit
+kubectl taint nodes <master-node-name> node-role.kubernetes.io/control-plane:NoSchedule-
+Now, if you have any Deployment-based workloads, you can scale them up to replicate pods on the master:
+
+bash
+Copy
+Edit
+kubectl scale deployment <your-deployment> --replicas=2
+⚠️ If your workloads require multiple nodes (e.g., stateful apps like databases), consider setting up a temporary backup.
+
