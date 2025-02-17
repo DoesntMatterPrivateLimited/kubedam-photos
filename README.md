@@ -135,6 +135,13 @@ kubectl version --short
 Ensure you follow the official Kubernetes upgrade path (you cannot skip major versions).
 
 
+Backup etcd (Master Node)
+Before upgrading the master node, back up etcd (critical for cluster recovery):
+
+bash
+Copy
+Edit
+sudo ETCDCTL_API=3 etcdctl snapshot save /var/lib/etcd/snapshot.db
 
 
 
