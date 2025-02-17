@@ -181,7 +181,13 @@ sudo systemctl restart kubelet
 3️⃣ Upgrade Worker Nod
 
 
+3️⃣ Upgrade Worker Node
+Execute the upgrade command:
 
+bash
+Copy
+Edit
+sudo kubeadm upgrade node
 
 
 
