@@ -126,6 +126,34 @@ Edit
 kubeadm token create --print-join-command
 Then, repeat Step 2.
 
+Check Current Kubernetes Version
+bash
+Copy
+Edit
+kubectl get nodes -o wide
+kubectl version --short
+Ensure you follow the official Kubernetes upgrade path (you cannot skip major versions).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
