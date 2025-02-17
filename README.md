@@ -46,3 +46,39 @@ Edit
 kubectl scale deployment <your-deployment> --replicas=2
 ⚠️ If your workloads require multiple nodes (e.g., stateful apps like databases), consider setting up a temporary backup.
 
+
+
+
+
+3️⃣ Cordon & Drain the Worker Node
+Cordoning prevents new pods from being scheduled while draining safely removes existing ones.
+
+bash
+Copy
+Edit
+kubectl cordon <worker-node-name>
+kubectl drain <worker-node-name> --ignore-daemonsets --delete-emptydir-data
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
