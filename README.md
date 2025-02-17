@@ -144,7 +144,15 @@ Edit
 sudo ETCDCTL_API=3 etcdctl snapshot save /var/lib/etcd/snapshot.db
 
 
+🚀 Step 1: Upgrade Worker Node
+1️⃣ Drain the Worker Node
+Before upgrading, remove all workloads from the worker node:
 
+bash
+Copy
+Edit
+kubectl drain <worker-node-name> --ignore-daemonsets --delete-emptydir-data
+This will evict all non-DaemonSet pods from the worker.
 
 
 
