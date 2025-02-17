@@ -71,6 +71,26 @@ sudo apt update && sudo apt upgrade -y
 sudo reboot
 
 
+5️⃣ Rejoin the Worker Node to the Cluster
+After the node reboots, ensure it re-joins the cluster.
+
+Check Node Status:
+bash
+Copy
+Edit
+kubectl get nodes
+If the node is NotReady, restart kubelet:
+
+bash
+Copy
+Edit
+sudo systemctl restart kubelet
+If the worker node is not joining automatically, re-run the kubeadm join command:
+
+bash
+Copy
+Edit
+sudo kubeadm join <master-ip>:6443 --token <token> --discovery-token-ca-cert-hash sha256:<hash>
 
 
 
