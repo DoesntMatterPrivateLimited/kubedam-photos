@@ -117,7 +117,14 @@ kubectl taint nodes <master-node-name> node-role.kubernetes.io/control-plane:NoS
 
 
 
+Step 4: (Optional) If Token Expired, Create a New One
+If your token has expired, create a new one:
 
+bash
+Copy
+Edit
+kubeadm token create --print-join-command
+Then, repeat Step 2.
 
 
 
