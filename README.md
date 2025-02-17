@@ -155,7 +155,14 @@ kubectl drain <worker-node-name> --ignore-daemonsets --delete-emptydir-data
 This will evict all non-DaemonSet pods from the worker.
 
 
+2️⃣ Upgrade Kubernetes Components
+Update Package Repository
+Ubuntu/Debian
 
+bash
+Copy
+Edit
+sudo apt update && sudo apt install -y kubeadm=<NEW_VERSION>
 
 
 
