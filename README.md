@@ -107,7 +107,13 @@ Copy
 Edit
 kubectl get pods -A -o wide
 
+7️⃣ Restore Master Node (If Taint Was Removed)
+If you removed the taint from the master in Step 2, reapply it to prevent scheduling workloads on it:
 
+bash
+Copy
+Edit
+kubectl taint nodes <master-node-name> node-role.kubernetes.io/control-plane:NoSchedule
 
 
 
