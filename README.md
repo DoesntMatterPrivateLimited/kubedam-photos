@@ -166,7 +166,19 @@ sudo apt update && sudo apt install -y kubeadm=<NEW_VERSION>
 
 
 
+Upgrade Kubelet & Kubectl
+bash
+Copy
+Edit
+sudo apt install -y kubelet=<NEW_VERSION> kubectl=<NEW_VERSION>
+Restart Kubelet:
 
+bash
+Copy
+Edit
+sudo systemctl daemon-reload
+sudo systemctl restart kubelet
+3️⃣ Upgrade Worker Nod
 
 
 
