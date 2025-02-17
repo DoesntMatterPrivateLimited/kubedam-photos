@@ -201,7 +201,24 @@ kubectl uncordon <worker-node-name>
 kubectl get nodes
 
 
+🚀 Step 2: Upgrade Master Node
+1️⃣ Upgrade Kubeadm on Master
+bash
+Copy
+Edit
+sudo apt update && sudo apt install -y kubeadm=<NEW_VERSION>
+Check upgrade plan:
 
+bash
+Copy
+Edit
+kubeadm upgrade plan
+Perform upgrade:
+
+bash
+Copy
+Edit
+sudo kubeadm upgrade apply v<NEW_VERSION>
 
 
 
