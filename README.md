@@ -191,6 +191,56 @@ sudo kubeadm upgrade node
 
 
 
+4️⃣ Uncordon & Verify
+Once upgraded, allow scheduling again:
+
+bash
+Copy
+Edit
+kubectl uncordon <worker-node-name>
+kubectl get nodes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
