@@ -59,6 +59,16 @@ Edit
 kubectl cordon <worker-node-name>
 kubectl drain <worker-node-name> --ignore-daemonsets --delete-emptydir-data
 
+4️⃣ Upgrade the Worker Node OS
+Now, upgrade the OS on the worker node:
+
+For Ubuntu/Debian:
+
+bash
+Copy
+Edit
+sudo apt update && sudo apt upgrade -y
+sudo reboot
 
 
 
